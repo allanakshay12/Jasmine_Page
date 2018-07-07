@@ -13,10 +13,7 @@ and open the template in the editor.
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-      .navbar-inverse 
-      { 
-          margin : 0 !important;
-      }
+      
       .childhood-section
       {
           background-color: purple;
@@ -28,7 +25,7 @@ and open the template in the editor.
       }
       .journey-section
       {
-          background-color: #0066ff;
+          background-color: #3333ff;
           margin : 0 !important;
           font-family: serif;
           font-size: xx-large;
@@ -44,10 +41,28 @@ and open the template in the editor.
           color: white;
           padding: 30px;
       }
+      .childhood_content
+      {
+          background-color: #cc33ff;
+          color: white;
+          font-family: serif;
+      }
+      .journey_content
+      {
+          background-color: #0066ff;
+          color: white;
+          font-family: serif;
+      }
+      .future_content
+      {
+          background-color: #009900;
+          color: white;
+          font-family: serif;
+      }
 
   </style>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar">
         
          <!--Navbar-->
          
@@ -59,13 +74,13 @@ and open the template in the editor.
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-            <a class="navbar-brand" href="#"><font style="font-family: Times New Roman; font-size: x-large">Jasmine</font></a>     
+            <a class="navbar-brand" href="#myCarousel"><font style="font-family: serif; font-size: x-large">Jasmine</font></a>     
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><font style="font-family: Times New Roman; font-size: large ">Childhood</font></a></li>
-        <li><a href="#"><font style="font-family: Times New Roman; font-size: large ">The Journey</font></a></li> 
-        <li><a href="#"><font style="font-family: Times New Roman; font-size: large ">Future Plans</font></a></li> 
+          <li><a href="#childhood_section"><font style="font-family: serif; font-size: large ">Childhood</font></a></li>
+        <li><a href="#journey_section"><font style="font-family: serif; font-size: large ">The Journey</font></a></li> 
+        <li><a href="#future_section"><font style="font-family: serif; font-size: large ">Future Plans</font></a></li> 
       </ul>
     </div>
   </div>
@@ -103,21 +118,55 @@ and open the template in the editor.
         
         <!--Childhood-->
         
-        <div class="childhood-section">
+        <div class="childhood-section" id="childhood_section">
             Jasmine's Childhood 
         </div>
+        <div class="childhood_content"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
         
         <!--The Journey-->
         
-        <div class="journey-section">
+        <div class="journey-section" id="journey_section">
             Jasmine's Journey 
         </div>
-        
+        <div class="journey_content"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
         <!--Future Plans-->
         
-        <div class="future-section">
+        <div class="future-section" id="future_section">
             Jasmine's Future
         </div>
+        <div class="future_content"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+        
+        <script>
+            // Add scrollspy to <body>
+$('body').scrollspy({target: ".navbar"});
+
+// Add smooth scrolling on all links inside the navbar
+$("#navigation_bar a").on('click', function(event) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+
+  } // End if
+
+});
+
+        </script>
         
     </body>
 </html>
