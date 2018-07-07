@@ -6,11 +6,118 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Jasmine - The White Bubbly Whale</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+      .navbar-inverse 
+      { 
+          margin : 0 !important;
+      }
+      .childhood-section
+      {
+          background-color: purple;
+          margin : 0 !important;
+          font-family: serif;
+          font-size: xx-large;
+          color: white;
+          padding: 30px;
+      }
+      .journey-section
+      {
+          background-color: #0066ff;
+          margin : 0 !important;
+          font-family: serif;
+          font-size: xx-large;
+          color: white;
+          padding: 30px;
+      }
+      .future-section
+      {
+          background-color: #006600;
+          margin : 0 !important;
+          font-family: serif;
+          font-size: xx-large;
+          color: white;
+          padding: 30px;
+      }
+
+  </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        
+         <!--Navbar-->
+         
+        <nav class="navbar navbar-inverse navbar-fixed-top" id='navigation_bar'>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+            <a class="navbar-brand" href="#"><font style="font-family: Times New Roman; font-size: x-large">Jasmine</font></a>     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><font style="font-family: Times New Roman; font-size: large ">Childhood</font></a></li>
+        <li><a href="#"><font style="font-family: Times New Roman; font-size: large ">The Journey</font></a></li> 
+        <li><a href="#"><font style="font-family: Times New Roman; font-size: large ">Future Plans</font></a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+        <!--Carousel-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active" >
+      <img src="la.jpg" alt="Los Angeles" style="width : 100%">
+    </div>
+    <div class="item">
+      <img src="chicago.jpg" alt="Chicago" style="width : 100%">
+    </div>
+    <div class="item">
+      <img src="ny.jpg" alt="New York" style="width : 100%">
+    </div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+        
+        <!--Childhood-->
+        
+        <div class="childhood-section">
+            Jasmine's Childhood 
+        </div>
+        
+        <!--The Journey-->
+        
+        <div class="journey-section">
+            Jasmine's Journey 
+        </div>
+        
+        <!--Future Plans-->
+        
+        <div class="future-section">
+            Jasmine's Future
+        </div>
+        
     </body>
 </html>
